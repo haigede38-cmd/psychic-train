@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selamat Tahun Baru — Untuk Sayangku</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0f1112">
+</head>
+<body>
+  <main class="page">
+    <div class="card" role="article" aria-labelledby="title">
+      <div class="card-decor top-left"></div>
+      <div class="card-decor bottom-right"></div>
+
+      <header class="card-header">
+        <!-- Portrait image: letakkan file photo.jpg / photo.webp di folder yang sama -->
+        <div class="portrait" aria-hidden="false">
+          <img src="photo.jpg" alt="Foto untuk Sayangku" loading="lazy" />
+        </div>
+
+        <h1 id="title" class="headline">Selamat Tahun Baru, Sayangku</h1>
+        <p class="subhead">31 Desember 2025 — Dari, <strong>deajusss</strong></p>
+      </header>
+
+      <section class="card-body">
+        <p class="message">Semoga tahun baru membawa cinta, kebahagiaan, dan segala yang terbaik untukmu. Aku mencintaimu, sekarang dan selamanya.</p>
+
+        <div class="countdown" aria-live="polite">
+          <div class="time" id="days"><span class="num">--</span><span class="label">hari</span></div>
+          <div class="time" id="hours"><span class="num">--</span><span class="label">jam</span></div>
+          <div class="time" id="minutes"><span class="num">--</span><span class="label">menit</span></div>
+          <div class="time" id="seconds"><span class="num">--</span><span class="label">detik</span></div>
+        </div>
+
+        <div class="actions">
+          <button id="celebrateBtn" class="btn" aria-pressed="false">Rayakan Sekarang</button>
+          <button id="audioBtn" class="btn btn-ghost" aria-pressed="false" title="Putar / Jeda musik">Putar Musik</button>
+          <a class="btn btn-ghost" href="#" id="shareBtn" onclick="navigator.share && navigator.share({title: 'Selamat Tahun Baru', text: 'Selamat Tahun Baru, Sayangku — dari deajusss', url: location.href}); return false;">Bagikan</a>
+        </div>
+
+        <div class="audio-controls" aria-hidden="false">
+          <label for="volume" class="visually-hidden">Volume</label>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.7" />
+          <button id="muteBtn" class="btn btn-ghost" title="Mode bisu">🔈</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Subtle floating sparkles -->
+    <div class="sparkles" aria-hidden="true"></div>
+  </main>
+
+  <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Background audio: ganti background.mp3 dengan file Anda -->
+  <audio id="bgAudio" src="background.mp3" loop preload="metadata"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
